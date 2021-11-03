@@ -21,8 +21,8 @@ namespace ShopsRUs.Controllers
             InvoiceService = invoiceService;
         }
 
-        [HttpGet("all")]
-        public async Task<ActionResult<GlobalResponse<InvoiceTotalAmountResponse>>> GetAllCustomers( [FromBody] CreateInvoiceRequest model)
+        [HttpGet()]
+        public async Task<ActionResult<GlobalResponse<InvoiceTotalAmountResponse>>> GetTotalInvoiceAmount( [FromBody] CreateInvoiceRequest model)
         {
             var result = await InvoiceService.GetTotalInvoiceAmount(model);
             return result.Status ? Ok(result) : BadRequest(result);
