@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data
+namespace Service.Request
 {
-    public class Discounts : BaseClass
+   public class GetDiscountByTypeRequest
     {
-        public double PercentageProperty { get; set; }
         public string DiscountType { get; set; }
-        public DateTime DateCreated  { get; set; }
-
-
-
+    }
 }
-}
+    

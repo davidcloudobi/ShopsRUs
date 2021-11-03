@@ -18,6 +18,8 @@ namespace Data.Infrastructure.Configurations
             builder.HasOne(x => x.Customer)
                         .WithMany(x => x.Invoices)
                         .HasForeignKey(x => x.CustomerId);
+            builder.HasMany(x => x.InvoiceProducts)
+                       .WithOne(x => x.invoice);
         }
     }
 }

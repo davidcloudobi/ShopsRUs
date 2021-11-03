@@ -1,28 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data
+namespace Service.Request
 {
-    public class Customer : BaseClass
+   public class CreateCustomerRequest
     {
+        [Required]
         public string Name { get; set; }
-
+     
+        [Required]
         public int Age { get; set; }
+        [Required]
         public string Gender { get; set; }
+       
         public int Phonenumber { get; set; }
         public string Email { get; set; }
+        [Required]
         public string Address { get; set; }
-        public DateTime DateCreated { get; set; }
-
-         public ICollection<Invoice> Invoices { get; set; }
-        public Customer()
-        {
-            Invoices = new HashSet<Invoice>();
-        }
-         
-
     }
 }

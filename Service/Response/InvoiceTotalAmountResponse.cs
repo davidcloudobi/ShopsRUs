@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services
+namespace Service.Response
 {
-    public class ProductService
+   public class InvoiceTotalAmountResponse
     {
-
+        public decimal TotalAmount { get; set; }
     }
 }

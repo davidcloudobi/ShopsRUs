@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Interface
+namespace Data.Infrastructure.Domain
 {
-    public interface IProduct
+ public   class InsertRequest
     {
-
     }
 }
